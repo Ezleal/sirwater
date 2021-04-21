@@ -1,11 +1,18 @@
 /**  GLOBALES  **/
 html{
+    box-sizing: border-box;
     font-size: 62.5%; /* Resetea los rems = 62,5% es igual a 10px de 16px (tamaño por defecto) */
 }
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body{
-    font-family: 'Lobster', cursive;
-    font-family: 'New Tegomin', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
+    line-height: 2;
 }
 
 h1{
@@ -25,12 +32,72 @@ h4{
     font-size: 2.6rem;
 
 }
+
+img{
+    max-width: 100%;
+}
+
+
+/** BOTONES **/
+
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+}
+
+.btn-amarillo{
+background-color: yellow;
+}
+
+.btn-verde{
+    background-color: green;
+    }
+
+.btn-rojo{
+        background-color: red;
+    }
+
+.btn-azul{
+    background-color: blue;
+    }
+/** Utilidades **/
+.d-block{
+    display: block!important;
+}
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300{
+    font-weight: 300;
+}
+ .ta-center{
+     text-align: center;
+ }
+
 .container {
 max-width: 120rem;
 margin: 0 auto;
 }
+.container-center{
+    max-width: 800px;
+}
+
+.container h2{
+    margin: 2rem 0 3rem 0;
+    }
 
 /*  Header  */
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+    padding: 0;
+}
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -49,6 +116,7 @@ margin: 0 auto;
     text-align: center;
     font-size: 3.8rem;
     line-height: 1.8rem; /* Interlineado por renglon*/
+    
 } 
 .barra{
     align-items: center;
@@ -58,7 +126,11 @@ margin: 0 auto;
 }
 .barra img{
     width: 100%;
-    
+    padding-top: 1rem;
+}
+
+.nosotros .barra{
+    padding: 0;
 }
 
 .navegacion a{
@@ -73,4 +145,196 @@ margin: 0 auto;
 }
 .navegacion a:last-of-type{
     margin: 0;
+}
+
+/**  Cajas Sobre  **/
+
+.cajasSobre {
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    
+}
+.internas{
+   flex-basis: calc(33.3% - 1rem);
+}
+
+.internas h3{
+    text-transform: uppercase;
+}
+
+/**  Cajas Trabajos  **/
+
+.container-trabajos{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.trabajos-internos{
+
+    flex-basis: calc(33% - 1rem);
+    border: 1px solid #B5B5B5B5;
+    background-color: #f5f5f5f5;
+}
+
+.contenido-trabajo{
+    padding: 2rem;
+}
+
+.contenido-trabajo h3,
+.contenido-trabajo p{
+    margin: 0;
+}
+
+.precio {
+color: #058f4a;
+font-weight: 700;
+}
+
+/**  Contacto Home  **/
+.img-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto {
+    flex: 1;
+    color: white;
+
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+.seccion-interior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-interior .blog{
+flex-basis: 60%;
+}
+
+.seccion-interior .testimoniales{
+
+ flex-basis:calc(40% - 2rem);
+
+}
+
+.entrada {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 0;
+}
+.blog a{
+    color: black;
+    text-decoration: none;
+}
+
+.entrada:last-of-type{
+    margin-bottom: 0;
+}
+
+.entrada .imagen{
+    flex-basis: 40%;
+
+}
+.entrada .texto-entrada{
+
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after{
+   content: '';
+   display: block;
+   width: 15rem;
+   height: 0.5rem;
+   background-color: cornflowerblue;
+   margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color:darkkhaki;
+}
+
+
+/*  Testimoniales  */
+.testimonial{
+
+    background-color: darkturquoise;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+    font-style: italic;
+}
+
+.testimonial p{
+    text-align: right;
+    font-style: italic;
+}
+
+.testimonial blockquote{
+    font-weight: 300;
+}
+
+.testimonial blockquote::before{
+    content: '"';
+    font-size: 4rem;
+}
+
+
+/************ SITE FOOTER *************/
+
+.site-footer{
+
+    background-color: #333333;
+    margin: 0;
+}
+
+.container-footer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 3rem 0rem;
+  
+}
+
+.container-footer p{
+    color: white;
+    
+}
+.derechos{
+    margin: 0;
+}
+
+/* MAIN NOSOTROS */
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 1.5rem 0;
+}
+
+.texto-nosotros ul{
+
+    padding-bottom: 2rem;
+
 }
