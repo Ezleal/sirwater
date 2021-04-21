@@ -41,6 +41,7 @@ img{
 /** BOTONES **/
 
 .boton{
+    border: none;
     color: white;
     font-weight: 700;
     text-decoration: none;
@@ -48,6 +49,11 @@ img{
     padding: 1rem 3rem;
     margin-top: 3rem;
     display: inline-block;
+    border-radius: 1rem;
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: cadetblue;
 }
 
 .btn-amarillo{
@@ -337,4 +343,62 @@ flex-basis: 60%;
 
     padding-bottom: 2rem;
 
+}
+
+
+/****Contenido Contacto *****/
+
+.imagen-humedad{
+    width: 100%;
+}
+
+label{
+    display: block;
+    font-weight: 700;
+}
+
+/*  UNA MANERA DE HACER TODOS LO INPUT
+
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
+    background-color: #E1E1E1;
+    display: block;
+    padding: 1rem;    
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+} */
+
+/*** OTRA MANERA SELECCIONANDO TODO MENOS EL NOT ***/
+
+input:not([type="submit"]), textarea{
+    background-color: #E1E1E1;
+    display: block;
+    padding: 1rem;    
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+input[type="radio"]{
+margin: 0;
+width: auto;
+}
+
+textarea{
+    height: 20rem;
+}
+
+legend{
+    font-size: 2rem;
+    color: #585656;
+}
+
+.forma-contacto{
+    display: flex;
+    justify-content: space-between;
+    max-width: 30rem;
+    align-items: center;
 }
